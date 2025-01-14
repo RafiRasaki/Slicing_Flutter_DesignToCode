@@ -20,6 +20,7 @@ class IntermezzoPage extends StatelessWidget {
           padding: const EdgeInsets.all(16),
           children: [
             Container(
+            //margin: const EdgeInsets.only(top: 100) ,
             padding: const EdgeInsets.fromLTRB(
             20, //left
             40, //top
@@ -50,11 +51,11 @@ class IntermezzoPage extends StatelessWidget {
                       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTr_iCVOfLVTa-oHOUXZWwXmWUg_sDFiMOfpQ&s',
                       fit: BoxFit.cover,
                       height: 70,
-                      width: 90,
+                      width: 100,
                       ),
                   ),
 
-                    const SizedBox(height: 10,),
+                    const SizedBox(height: 20,),
 
                     Text(
                       'Rumah Makan Masakan Padang',

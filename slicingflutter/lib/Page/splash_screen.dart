@@ -13,7 +13,7 @@ class SplashPage extends StatefulWidget {
 
     @override
   void initState() {
-    Timer(Duration(seconds: 7), (() {
+    Timer(Duration(seconds: 10), (() {
       Navigator.pushNamedAndRemoveUntil(
         context, '/intermezzo', (route) => false);
     }));
@@ -22,24 +22,25 @@ class SplashPage extends StatefulWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.deepOrange,
+      backgroundColor: Colors.redAccent,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(
-              width: 100,
-              height: 100,
-              decoration: BoxDecoration(borderRadius: BorderRadius.circular(10)),
-              margin: EdgeInsets.only(bottom: 50),
-              child: Image.network(
-                'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTr_iCVOfLVTa-oHOUXZWwXmWUg_sDFiMOfpQ&s',
-              ),
-            ),
+             ClipRRect(
+                    borderRadius: BorderRadius.circular(10),
+                    child: Image.network(
+                      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTr_iCVOfLVTa-oHOUXZWwXmWUg_sDFiMOfpQ&s',
+                      fit: BoxFit.cover,
+                      height: 180,
+                      width: 300,
+                      ),
+                  ),
+                  const SizedBox(height: 20),
             Text(
-              'Rumah Makan Uda Rasaki',
+              'Rumah Makan \nUda Rasaki',
               style: TextStyle(
-                fontSize: 30,
+                fontSize: 25,
                 fontWeight: FontWeight.w500,
               ), 
                textAlign: TextAlign.center,
