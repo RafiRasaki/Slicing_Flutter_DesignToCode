@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:slicingflutter/widget/custom_menu.dart';
+import 'package:slicingflutter/widget/custom_otherfood.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -79,7 +80,70 @@ class HomePage extends StatelessWidget {
                     review: '1.5k Review', 
                     image: 'https://img.okezone.com/content/2021/02/26/301/2368632/dendeng-balado-pedesnya-nampol-banget-begini-resep-dan-cara-bikinnya-5k5eIj1HVT.jpg', 
                     hargadiskon: 'Rp.28.000'
-                    )
+                    ),
+                ],
+              ),
+            ),
+            const SizedBox(height: 15),
+            Container(
+              child: Row(
+                children: [
+                  Text(
+                    'Other Food',
+                    style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.deepOrange[900],
+                      fontWeight: FontWeight.bold
+                    ),
+                  )
+                ],
+              ),
+            ),
+            const SizedBox(height: 10),
+
+            const CustomOtherFood(
+              imageother: 'https://cdn-brilio-net.akamaized.net/news/2019/10/22/172646/1114926-1000xauto-14-resep-cara-membuat-ayam-bakar.jpg', 
+              namamenuother: 'Ayam Bakar', 
+              kriteriaother: 'Pedes Manis Smoky',
+              ),
+
+             const CustomOtherFood(
+                imageother: 'https://static.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/p2/13/2023/07/26/IMG-20230726-WA0026-2682519124.jpg', 
+                namamenuother: 'Telur Barendo', 
+                kriteriaother: 'Asin Gurih Manis'
+              ),
+
+              const CustomOtherFood(
+                imageother: 'https://ecs7.tokopedia.net/img/cache/700/VqbcmM/2020/5/30/12c42155-e49e-4f63-b443-d3804c36db60.jpg', 
+                namamenuother: 'Gulai Cincang', 
+                kriteriaother: 'Pedes Asin'
+              ),
+
+              const CustomOtherFood(
+                imageother: 'https://www.astronauts.id/blog/wp-content/uploads/2023/04/Resep-Ayam-Goreng-Serundeng-ala-Rumahan-yang-Nggak-Kalah-Enak-dari-Restoran.jpg', 
+                namamenuother: 'Ayam Goreng', 
+                kriteriaother: 'Gurih Manis'
+              ),
+
+              const CustomOtherFood(
+                imageother: 'https://cdn.idntimes.com/content-images/community/2022/04/kerupuk-jangek-3eba3d3bd7713d93e893d78a6f57e31c-db135b203b68d89946828651f625b2b1.jpg', 
+                namamenuother: 'Kerupuk Kulit Gulai', 
+                kriteriaother: 'Asin Pedes Rempah'
+              ),
+
+            const SizedBox(height: 10),
+
+            Container(
+              child: Row(
+                children: [
+                  Text(
+                    'Drink',
+                    style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.deepOrange[900],
+                      fontWeight: FontWeight.bold
+                    ),
+                  )
                 ],
               ),
             ),
