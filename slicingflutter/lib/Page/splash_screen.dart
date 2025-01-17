@@ -13,7 +13,7 @@ class SplashPage extends StatefulWidget {
 
     @override
   void initState() {
-    Timer(Duration(seconds: 10), (() {
+    Timer(Duration(seconds: 2), (() {
       Navigator.pushNamedAndRemoveUntil(
         context, '/intermezzo', (route) => false);
     }));

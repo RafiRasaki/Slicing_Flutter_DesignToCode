@@ -104,6 +104,15 @@ class IntermezzoPage extends StatelessWidget {
                 ],
               ),
             ),
+
+            const SizedBox(height: 180),
+            Container(
+              child: Column(
+                children: [
+                  
+                ],
+              ),
+            ),
           ],
         ),
       ),
