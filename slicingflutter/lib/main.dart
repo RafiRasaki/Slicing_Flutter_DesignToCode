@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+import 'package:slicingflutter/Page/detai_page.dart';
 import 'package:slicingflutter/Page/home_page.dart';
 import 'package:slicingflutter/Page/intermezzo_page.dart';
 import 'package:slicingflutter/Page/splash_screen.dart';
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
       '/' :(context) => SplashPage(),
       '/intermezzo' :(context) => IntermezzoPage(),
       '/homepage' :(context) => HomePage(),
+      '/detailpage' :(context) => DetailPage(),
       },
     );
   }

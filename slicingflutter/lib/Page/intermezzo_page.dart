@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:slicingflutter/widget/custom_button.dart';
 
 class IntermezzoPage extends StatelessWidget {
   const IntermezzoPage({super.key});
@@ -14,7 +15,7 @@ class IntermezzoPage extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: Center(
-            child: const Text('Rumah Makan Padang')),
+            child: const Text('Selamat Datang')),
         ),
         body: ListView(
           padding: const EdgeInsets.all(16),
@@ -78,38 +79,31 @@ class IntermezzoPage extends StatelessWidget {
                   
                   const SizedBox(height: 40,),
 
-                  TextButton(
+                  CustomButton(
+                    judul: 'Jelajahi Lebih Lanjut', 
+                    lebarbutton: 170,
                     onPressed: (){
                       Navigator.pushNamedAndRemoveUntil(
                       context, '/homepage', (route) => false);
                     },
-                    style: ButtonStyle(
-                      padding: MaterialStateProperty.resolveWith((states) {
-                        return EdgeInsets.symmetric(horizontal: 20, vertical: 16);
-                      }),
-                      backgroundColor: MaterialStateProperty.resolveWith((states) {
-                        return Colors.red[700];
-                      }),
-                      foregroundColor: MaterialStateProperty.resolveWith((states) {
-                        return Colors.white;
-                      }),
-                      shape:  MaterialStateProperty.resolveWith((states) {
-                        return RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(30),
-                        );
-                      }),
-                    ) , 
-                    child: const Text('Jelahi Lebih Lanjut'),
                   ),
                 ],
               ),
             ),
 
-            const SizedBox(height: 180),
+          const SizedBox(height: 180),
             Container(
               child: Column(
                 children: [
-                  
+                  Text(
+                    'Term and Condition',
+                    style: TextStyle(
+                      fontSize: 15,
+                      color: Colors.red[900],
+                      fontWeight: FontWeight.bold,
+                      decoration: TextDecoration.underline
+                    ),
+                  ),
                 ],
               ),
             ),

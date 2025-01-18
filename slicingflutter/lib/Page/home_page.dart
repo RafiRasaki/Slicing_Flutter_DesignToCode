@@ -105,30 +105,40 @@ class HomePage extends StatelessWidget {
               imageother: 'https://cdn-brilio-net.akamaized.net/news/2019/10/22/172646/1114926-1000xauto-14-resep-cara-membuat-ayam-bakar.jpg', 
               namamenuother: 'Ayam Bakar', 
               kriteriaother: 'Pedes Manis Smoky',
+              hargamakanan: 'Rp.15.000',
+              ratingother: '1.0k Review',
               ),
 
              const CustomOtherFood(
                 imageother: 'https://static.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/p2/13/2023/07/26/IMG-20230726-WA0026-2682519124.jpg', 
                 namamenuother: 'Telur Barendo', 
-                kriteriaother: 'Asin Gurih Manis'
+                kriteriaother: 'Asin Gurih Manis',
+                hargamakanan: 'Rp.13.000',
+                 ratingother: '2.8k Review',
               ),
 
               const CustomOtherFood(
                 imageother: 'https://ecs7.tokopedia.net/img/cache/700/VqbcmM/2020/5/30/12c42155-e49e-4f63-b443-d3804c36db60.jpg', 
                 namamenuother: 'Gulai Cincang', 
-                kriteriaother: 'Pedes Asin'
+                kriteriaother: 'Pedes Asin',
+                hargamakanan: 'Rp.20.000',
+                 ratingother: '1.5k Review',
               ),
 
               const CustomOtherFood(
                 imageother: 'https://www.astronauts.id/blog/wp-content/uploads/2023/04/Resep-Ayam-Goreng-Serundeng-ala-Rumahan-yang-Nggak-Kalah-Enak-dari-Restoran.jpg', 
                 namamenuother: 'Ayam Goreng', 
-                kriteriaother: 'Gurih Manis'
+                kriteriaother: 'Gurih Manis',
+                hargamakanan: 'Rp.15.000',
+                 ratingother: '1.1k Review',
               ),
 
               const CustomOtherFood(
                 imageother: 'https://cdn.idntimes.com/content-images/community/2022/04/kerupuk-jangek-3eba3d3bd7713d93e893d78a6f57e31c-db135b203b68d89946828651f625b2b1.jpg', 
                 namamenuother: 'Kerupuk Kulit Gulai', 
-                kriteriaother: 'Asin Pedes Rempah'
+                kriteriaother: 'Asin Pedes Rempah',
+                hargamakanan: 'Rp.11.000',
+                ratingother: '1.7k Review',
               ),
 
             const SizedBox(height: 10),

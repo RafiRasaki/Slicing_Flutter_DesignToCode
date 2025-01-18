@@ -1,18 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+import 'package:slicingflutter/Page/detai_page.dart';
 
 class CustomOtherFood extends StatelessWidget{
 
   final String imageother;
   final String namamenuother;
-  //final String ratingother;
+  final String ratingother;
   final String kriteriaother;
+  final String hargamakanan;
 
   const CustomOtherFood({
     Key? key, 
     required this.imageother,
     required this.namamenuother,
-    //required this.ratingother,
+    required this.ratingother,
     required this.kriteriaother,
+    required this.hargamakanan,
     }) : super(key: key);
 
 
@@ -20,7 +24,9 @@ class CustomOtherFood extends StatelessWidget{
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        print('Berhasil');
+        Navigator.push(
+        context, MaterialPageRoute(builder: (context)=> DetailPage())
+        );
       },
       child: Container(
         margin: EdgeInsets.only(top: 10),
@@ -67,9 +73,53 @@ class CustomOtherFood extends StatelessWidget{
                       color: Colors.deepOrange[900],
                     ),
                   ),
+
+                const SizedBox(height: 5,),
+
+                Row(
+                  children: [
+                    RatingBar.builder(
+                    initialRating: 5,
+                    minRating: 1,
+                    direction: Axis.horizontal,
+                    allowHalfRating: true,
+                    itemCount: 5,
+                    itemSize: 13,
+                    itemBuilder: (context, _) => Icon(
+                      Icons.star,
+                      color: Colors.amber,
+                    ),
+                    onRatingUpdate: (rating) {},
+                    ignoreGestures: true,
+                    ),
+
+                const SizedBox(width: 7),
+
+                    Text(
+                    ratingother,
+                    style: TextStyle(
+                    fontSize: 12,
+                    color: Colors.deepOrange[900],
+                    ),
+                  ),
+                  ],
+                ),
                 ],
               ),
             ),
+             Container(
+              child: Column(
+                children: [
+                  Text(
+                    hargamakanan,
+                    style: TextStyle(
+                      fontSize: 14,
+                        color: Colors.deepOrange[900],
+                    ),
+                  )
+                ],
+              ),
+            ), 
           ],
         ),
       ),

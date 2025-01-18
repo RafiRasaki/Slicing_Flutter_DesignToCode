@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+import 'package:slicingflutter/Page/detai_page.dart';
+import 'package:slicingflutter/widget/custom_button.dart';
 
 class CustomMenu extends StatelessWidget{
 
@@ -116,33 +118,21 @@ class CustomMenu extends StatelessWidget{
                   ),
                   ],
                 ),
-                const SizedBox(height: 30),
+                const SizedBox(height: 25),
 
-                TextButton(
+                CustomButton(
+                  judul: 'Beli Sekarang', 
+                  lebarbutton: 120,
                   onPressed: (){
-                    print('Button Beli');
-                  },
-                  style: ButtonStyle(
-                    padding: MaterialStateProperty.resolveWith((states) {
-                      return EdgeInsets.symmetric(horizontal: 20, vertical: 16);
-                    }),
-                    backgroundColor: MaterialStateProperty.resolveWith((states) {
-                      return Colors.red[700];
-                    }),
-                    foregroundColor: MaterialStateProperty.resolveWith((states) {
-                      return Colors.white;
-                    }),
-                    shape:  MaterialStateProperty.resolveWith((states) {
-                      return RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(30),
-                      );
-                    }),
-                  ) , 
-                  child: const Text('Beli Sekarang'),
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => DetailPage())
+                    );
+                  }
                 ),
               ],
             ),
-          )
+          ),
         ],
       ) ,
     );
