@@ -4,6 +4,7 @@ import 'package:slicingflutter/Page/detai_page.dart';
 import 'package:slicingflutter/Page/home_page.dart';
 import 'package:slicingflutter/Page/intermezzo_page.dart';
 import 'package:slicingflutter/Page/splash_screen.dart';
+import 'package:slicingflutter/Page/transaksi_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
       '/intermezzo' :(context) => IntermezzoPage(),
       '/homepage' :(context) => HomePage(),
       '/detailpage' :(context) => DetailPage(),
+      //'/transaksipage' :(context) => TransaksiPage(),
       },
     );
   }

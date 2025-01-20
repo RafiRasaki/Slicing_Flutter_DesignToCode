@@ -51,7 +51,7 @@ class HomePage extends StatelessWidget {
                   ),
 
                   CustomMenu(
-                    namamenu: 'Masakan Daging Rendang',
+                    namamenu: 'Rendang Daging',
                     hargaasli: 'Rp.40.000', 
                     review: '3.2k Review', 
                     image: 'https://1.bp.blogspot.com/-cGt_Dt278Eg/XwGUKNuy-OI/AAAAAAAAPx8/Q3SN1dyfJk0H1-2gDdoUjqTt1wROnA5YgCK4BGAsYHg/d/Rendang%2BDaging%2BDapur%2BSiena%2B2.jpg', 
@@ -157,6 +157,29 @@ class HomePage extends StatelessWidget {
                 ],
               ),
             ),
+
+            const SizedBox(height: 15),
+
+            const CustomOtherFood(
+              imageother: 'https://www.tehsariwangi.com/uploads/ar/article/370/3c6aeb79728eac58b4e6828fff670d99.jpg', 
+              namamenuother: 'Teh Talua', 
+              ratingother: '1.7k Review', 
+              kriteriaother: 'Manis Teh Susu Telur', 
+              hargamakanan: 'Rp.13.000'),
+
+            const CustomOtherFood(
+              imageother: 'https://img-global.cpcdn.com/recipes/2dc8cb6b278590b5/400x400cq70/photo.jpg', 
+              namamenuother: 'Teh Tarik', 
+              ratingother: '1.5k Review', 
+              kriteriaother: 'Manis Teh Susu', 
+              hargamakanan: 'Rp.8.000'),
+
+              const CustomOtherFood(
+                imageother: 'https://i1.wp.com/makanmana.net/wp-content/uploads/2019/02/P1310365.jpg?fit=1024%2C1024&ssl=1', 
+                namamenuother: 'Es Pokat', 
+                ratingother: '2.7k Review', 
+                kriteriaother: 'Manis Dengan Buah Alpukat Serta Gula', 
+                hargamakanan: 'Rp.13.000'),
           ],
         ),
       ),
