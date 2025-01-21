@@ -22,7 +22,7 @@ class SplashPage extends StatefulWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.redAccent,
+      backgroundColor: Colors.red[100],
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
