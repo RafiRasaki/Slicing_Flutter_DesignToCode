@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:slicingflutter/widget/custom_button.dart';
+import 'package:slicingflutter/widget/custom_payment.dart';
 
 class TransaksiPage extends StatelessWidget{
   @override
@@ -33,7 +34,7 @@ class TransaksiPage extends StatelessWidget{
                 decoration: BoxDecoration(
                   image: DecorationImage(
                     image: NetworkImage(
-                      'https://blog.modalku.co.id/wp-content/uploads/2021/01/Kemudahan-Pembayaran-dalam-Bisnis-dengan-Transaksi-Non-Tunai.jpg'
+                      'https://blog.modalku.co.id/wp-content/uploads/2021/01/Kemudahan-Pembayaran-dalam-Bisnis-dengan-Transaksi-Non-Tunai.jpg',
                     )
                   )
                 ),
@@ -44,11 +45,13 @@ class TransaksiPage extends StatelessWidget{
     }
 
     Widget containerdetail(){
-      return Container(
+      return Stack(
+        children: [
+          Container(
         padding: EdgeInsets.all(10),
         margin: EdgeInsets.only(top: 10),
-        width: 100,
-        height: 250,
+        width: 400,
+        height: 110,
         decoration: BoxDecoration(
           color: Colors.red[50],
           borderRadius: BorderRadius.circular(18)
@@ -58,7 +61,7 @@ class TransaksiPage extends StatelessWidget{
           children: [
             Container(
             width: 90,
-            height: 70,
+            height: 90,
             margin: EdgeInsets.only(right: 16),
             decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(15),
@@ -67,11 +70,17 @@ class TransaksiPage extends StatelessWidget{
                   'https://1.bp.blogspot.com/-cGt_Dt278Eg/XwGUKNuy-OI/AAAAAAAAPx8/Q3SN1dyfJk0H1-2gDdoUjqTt1wROnA5YgCK4BGAsYHg/d/Rendang%2BDaging%2BDapur%2BSiena%2B2.jpg'
                   ),
                 ),
-              )
+              ),
+              child: Row(
+                children: [
+                  
+                ],
+              ),
             ),
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
+                
                 children: [
                   Text(
                     'Rendang Daging',
@@ -83,26 +92,29 @@ class TransaksiPage extends StatelessWidget{
                   
                   const SizedBox(height: 10),
 
-                  Text(
-                    'Rp.30.000',
-                    style: TextStyle(
-                      fontSize: 15,
-                      color: Colors.deepOrange[900]
-                    ),
+                      Text(
+                        'Rp.60.000',
+                        style: TextStyle(
+                          fontSize: 15,
+                          color: Colors.deepOrange[900]
+                        ),
+                      ),
+                  const SizedBox(height: 10),
+                      Text(
+                        'Total Pembelian : 2 Item',
+                        style: TextStyle(
+                          fontSize: 15,
+                          color: Colors.deepOrange[900]
+                        ),
+                      ),
+                       const SizedBox(height: 10),
+                    ],
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
-            /*Container(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  Text('Detail Pesanan')
-                ],
-              ),
-            ),*/
-          ],
-        ),
+          ),
+        ],
       );
     }
 
@@ -134,29 +146,19 @@ class TransaksiPage extends StatelessWidget{
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(
-              height: 100,
-              width: 100,
-              decoration: const BoxDecoration(
-                image: DecorationImage(
-                  image: NetworkImage(
-                    'https://www.tobekocigaretteshop.com/wp-content/uploads/2024/05/qris.png'
-                  ),
-                ),
-              ),
+            CustomPayment(
+              imagepayment: 'https://www.tobekocigaretteshop.com/wp-content/uploads/2024/05/qris.png', 
+              judulpayment: 'Metode QRIS'
             ),
 
-            Container(
-              margin: EdgeInsets.only(left: 5),
-              height: 70,
-              width: 100,
-              decoration: const BoxDecoration(
-                image: DecorationImage(
-                  image: NetworkImage(
-                    'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Bank_Central_Asia.svg/1280px-Bank_Central_Asia.svg.png'
-                  ),
-                ),
-              ),
+            CustomPayment(
+              imagepayment: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Bank_Central_Asia.svg/1280px-Bank_Central_Asia.svg.png', 
+              judulpayment: 'Transfer Bank BCA'
+            ),
+
+            CustomPayment(
+              imagepayment: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Logo_dana_blue.svg/1200px-Logo_dana_blue.svg.png', 
+              judulpayment: 'Transfer Dana'
             ),
           ],
         ),

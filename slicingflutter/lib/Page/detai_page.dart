@@ -118,16 +118,16 @@ class DetailPage extends StatelessWidget{
                           icon: Icons.remove
                         ),
                         
-                        const SizedBox(width: 10),
+                        const SizedBox(width: 15),
 
                         Container(
                           child: Row(
                             children: [
-                              Text('0')
+                              Text('2')
                             ],
                           ),
                         ),
-                        const SizedBox(width: 10),
+                        const SizedBox(width: 15),
 
                         Flat3dButton.icon(
                           onPressed: (){
@@ -136,6 +136,17 @@ class DetailPage extends StatelessWidget{
                           icon: Icons.add,
                           color: Colors.green,
                         ),
+
+                        const SizedBox(width: 15),
+
+                        Text(
+                          'Total Harga : Rp.60.000',
+                          style: TextStyle(
+                            fontSize: 13,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.deepOrange[900]
+                          ),
+                        )
                       ],
                     ),
                   ),
@@ -168,7 +179,6 @@ class DetailPage extends StatelessWidget{
                       hintText: 'Silahkan Masukan Pesanan ',
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
-                        
                       ),
                     ),
                   ),
